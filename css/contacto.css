@@ -1,0 +1,40 @@
+/* ============================================================
+   CONTACTO.CSS — Estilos exclusivos de pages/contacto.html
+   ============================================================ */
+
+/* Hoy la página solo muestra la columna de información de contacto
+   (no hay formulario), así que la centramos en una sola columna
+   en vez del grid de dos columnas que se usaba antes. */
+.contact-grid {
+  display: flex;
+  justify-content: center;
+}
+
+.contact-info {
+  width: 100%;
+  max-width: 640px;
+}
+
+.contact-info h2 {
+  margin-bottom: var(--spacing-md);
+}
+
+.contact-item {
+  margin-bottom: var(--spacing-md);
+}
+
+.contact-item h3 {
+  font-size: 1rem;
+  color: var(--color-secondary);
+  margin-bottom: 0.3rem;
+}
+
+.social-contact h3 {
+  font-size: 1rem;
+  margin-bottom: var(--spacing-xs);
+}
+
+/* Reutilizamos el estilo de íconos del footer también acá */
+.social-contact .footer-social {
+  margin-top: var(--spacing-xs);
+}

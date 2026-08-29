@@ -1,0 +1,7 @@
+# Archivos del sistema operativo / editor
+.DS_Store
+Thumbs.db
+.vscode/
+
+# Carpeta local de Vercel CLI (se genera al hacer `vercel dev` / `vercel deploy`)
+.vercel

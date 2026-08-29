@@ -1,0 +1,197 @@
+/* ============================================================
+   GALERIA.CSS — Estilos exclusivos de pages/galeria.html
+   ============================================================ */
+
+/* ---------- Filtros ---------- */
+.gallery-filters {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--spacing-xs);
+  margin-bottom: var(--spacing-lg);
+}
+
+.filter-btn {
+  padding: 0.5rem 1.1rem;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  background: transparent;
+  color: var(--color-text-muted);
+  font-family: var(--font-heading);
+  font-size: 0.75rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.filter-btn:hover,
+.filter-btn:focus-visible {
+  border-color: var(--color-secondary);
+  color: var(--color-text-strong);
+}
+
+.filter-btn.is-active {
+  /* Azul/cian (--color-secondary) en vez del violeta (--color-primary),
+     para que coincida con el resto de los acentos de la paleta. */
+  background-color: var(--color-secondary);
+  border-color: var(--color-secondary);
+  color: var(--color-on-primary);
+}
+
+/* ---------- Grid de imágenes ---------- */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: var(--spacing-md);
+}
+
+.gallery-item {
+  position: relative;
+  border-radius: var(--border-radius);
+  overflow: hidden;
+  cursor: pointer;
+  box-shadow: var(--box-shadow);
+  border: none;
+  padding: 0;
+  background: none;
+  display: block;
+  width: 100%;
+}
+
+.gallery-item img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  transition: var(--transition);
+}
+
+.gallery-item:hover img,
+.gallery-item:focus-visible img {
+  transform: scale(1.06);
+}
+
+.gallery-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: var(--spacing-sm);
+  text-align: left;
+  background: linear-gradient(0deg, rgba(5, 7, 12, 0.9), transparent 65%);
+  opacity: 0;
+  transition: var(--transition);
+}
+
+.gallery-item:hover .gallery-overlay,
+.gallery-item:focus-visible .gallery-overlay {
+  opacity: 1;
+}
+
+.gallery-overlay h3 {
+  font-size: 1rem;
+  margin-bottom: 0.2rem;
+}
+
+.gallery-overlay p {
+  color: var(--color-text-muted);
+  font-size: 0.8rem;
+  margin: 0;
+}
+
+/* Estado vacío (cuando un filtro no tiene resultados) */
+.gallery-empty {
+  grid-column: 1 / -1;
+  text-align: center;
+  color: var(--color-text-muted);
+  padding: var(--spacing-lg) 0;
+}
+
+/* ============================================================
+   LIGHTBOX (imagen ampliada a pantalla completa)
+   ============================================================ */
+.lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 2000;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-sm);
+}
+
+.lightbox[hidden] {
+  display: none;
+}
+
+.lightbox-backdrop {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(5, 7, 12, 0.92);
+}
+
+.lightbox-content {
+  position: relative;
+  max-width: min(90vw, 1000px);
+  max-height: 75vh;
+  object-fit: contain;
+  border-radius: var(--border-radius-sm);
+  box-shadow: var(--box-shadow);
+}
+
+.lightbox-caption {
+  position: relative;
+  color: var(--color-text-strong);
+  font-family: var(--font-heading);
+  font-size: 0.9rem;
+  letter-spacing: 0.03em;
+}
+
+.lightbox-close {
+  position: absolute;
+  top: var(--spacing-sm);
+  right: var(--spacing-sm);
+  z-index: 1;
+  width: 42px;
+  height: 42px;
+  border: none;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: var(--color-text-strong);
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.lightbox-close:hover,
+.lightbox-close:focus-visible {
+  background-color: var(--color-accent);
+}
+
+.lightbox-nav {
+  position: relative;
+  width: 46px;
+  height: 46px;
+  border: none;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: var(--color-text-strong);
+  font-size: 1.8rem;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.lightbox-nav:hover,
+.lightbox-nav:focus-visible {
+  background-color: var(--color-primary);
+  color: var(--color-on-primary);
+}
+
+@media (min-width: 720px) {
+  .lightbox {
+    flex-direction: row;
+  }
+
+  .lightbox-nav--prev { order: -1; }
+}

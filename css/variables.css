@@ -1,0 +1,68 @@
+/* ============================================================
+   VARIABLES.CSS — Paleta de colores, tipografías y medidas
+   ============================================================
+   Este es el ÚNICO archivo que necesitás tocar para cambiar los
+   colores, fuentes o espaciados de TODO el sitio. Todos los demás
+   archivos CSS usan estas variables con var(--nombre-variable),
+   así que un cambio acá se refleja en cada página automáticamente.
+   ============================================================ */
+
+:root {
+  /* ---------- COLORES DE MARCA ----------
+     Editá estos 3 colores para cambiar la identidad visual
+     del estudio (hoy: violeta + cian + rosa, estilo "gaming"). */
+  --color-primary: #8b5cf6;      /* Violeta principal: botones, links, acentos */
+  --color-secondary: #22d3ee;    /* Cian: detalles, hover, íconos */
+  --color-accent: #f43f5e;       /* Rosa/rojo: llamados a la acción importantes */
+
+  /* ---------- FONDOS (tema oscuro tipo estudio de videojuegos) ---------- */
+  --color-bg: #05070c;           /* Fondo general de la página (el más oscuro) */
+  --color-bg-elevated: #0b0e17;  /* Fondo de secciones "elevadas" (cards, header) */
+  --color-bg-alt: #131826;       /* Fondo alterno para separar secciones */
+  --color-overlay: rgba(5, 7, 12, 0.82); /* Capa oscura sobre imágenes de fondo */
+
+  /* ---------- TEXTOS ---------- */
+  --color-text: #e2e8f0;         /* Texto principal sobre fondo oscuro */
+  --color-text-muted: #94a3b8;   /* Texto secundario / descripciones */
+  --color-text-strong: #f8fafc;  /* Texto blanco puro para títulos destacados */
+  --color-on-primary: #05070c;   /* Texto sobre botones de color primario */
+
+  /* ---------- TIPOGRAFÍAS ----------
+     "Fraunces" para títulos: una serif elegante y cálida (variable,
+     con curvas suaves) cargada desde Google Fonts en el <head> de cada
+     página. Es la alternativa gratuita más parecida a "Belanidi Serif"
+     que encontramos: esa fuente es de pago y no está en Google Fonts,
+     así que no se puede cargar automáticamente por CDN.
+
+     Si comprás/tenés los archivos de Belanidi Serif, reemplazá el
+     <link> de Google Fonts del <head> de cada página por un @font-face
+     acá mismo, por ejemplo:
+
+       @font-face {
+         font-family: 'Belanidi Serif';
+         src: url('../fonts/BelanidiSerif.woff2') format('woff2');
+         font-display: swap;
+       }
+
+     y después cambiá el valor de --font-heading de abajo por:
+       --font-heading: 'Belanidi Serif', 'Fraunces', serif;
+
+     "Rubik" se mantiene para el texto de lectura (buena legibilidad
+     en párrafos largos, contrasta bien con una serif en los títulos). */
+  --font-heading: 'Fraunces', 'Georgia', serif;
+  --font-body: 'Rubik', 'Segoe UI', sans-serif;
+
+  /* ---------- ESPACIADOS (escala consistente) ---------- */
+  --spacing-xs: 0.5rem;
+  --spacing-sm: 1rem;
+  --spacing-md: 2rem;
+  --spacing-lg: 4rem;
+  --spacing-xl: 6rem;
+
+  /* ---------- OTROS ---------- */
+  --border-radius: 12px;
+  --border-radius-sm: 6px;
+  --box-shadow: 0 10px 30px rgba(0, 0, 0, 0.45);
+  --transition: all 0.25s ease;
+  --max-width: 1240px;
+}

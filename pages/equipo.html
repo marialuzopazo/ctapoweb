@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Equipo — Estudio CTAPO</title>
+  <meta name="description" content="Conocé al equipo: quiénes somos y cómo contactarnos.">
+
+  <link rel="icon" href="../img/logo/logo.svg" type="image/svg+xml">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Rubik:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="../css/variables.css">
+  <link rel="stylesheet" href="../css/base.css">
+  <link rel="stylesheet" href="../css/equipo.css">
+</head>
+<body>
+
+  <!-- ============ HEADER / NAVEGACIÓN ============ -->
+  <header>
+    <div class="container header-container">
+      <a href="../index.html" class="logo">
+        <img src="../img/logo/logo.svg" alt="Estudio CTAPO" width="180" height="55">
+      </a>
+
+      <button id="navToggle" class="nav-toggle-btn" aria-expanded="false" aria-controls="primaryNav" aria-label="Abrir menú de navegación">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav id="primaryNav" class="main-nav" aria-label="Navegación principal">
+        <ul>
+          <li><a href="../index.html">Inicio</a></li>
+          <li><a href="equipo.html">Equipo</a></li>
+          <li><a href="galeria.html">Galería</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ============ HERO INTERNO ============ -->
+    <section class="page-hero">
+      <div class="container hero-content">
+        <p class="eyebrow reveal">El equipo</p>
+        <h1 class="reveal">Detrás de CTAPÓ</h1>
+        <p class="reveal">
+          Hacé clic en la foto de
+          cada integrante para ver su descripción completa, su contacto
+          y sus redes.
+        </p>
+      </div>
+    </section>
+
+    <!-- ============ GRID DE INTEGRANTES ============
+         Cada tarjeta guarda toda su info en atributos data-* para que
+         js/team.js arme el modal sin tener que duplicar el contenido
+         en el HTML. Para agregar un integrante nuevo, copiá un
+         <article class="team-member"> completo y editá sus datos. -->
+    <section class="team section-padding">
+      <div class="container">
+        <div class="team-grid">
+
+          <article class="team-member reveal"
+            data-nombre="Lucas Traverso"
+            data-rol="Diseño de juego y Narrativa"
+            data-bio="el que escribió este Mambo"
+            data-email="ctapoproducciones@gmail.com"
+            data-instagram="https://www.instagram.com/n.tut.n/">
+            <button type="button" class="member-image" aria-haspopup="dialog">
+              <img src="../img/equipo/integrante-1.png" alt="Foto de Lucas traverso, diseño de juego" loading="lazy">
+              <span class="member-image-hint">Ver perfil y contacto</span>
+            </button>
+            <div class="member-content">
+              <h3>Lucas Traverso</h3>
+              <p class="member-role">Diseño de Juego / Narrativa</p>
+              <p class="member-bio">Diseño y dirección del juego - Documentación y Narrativa </p>
+            </div>
+          </article>
+
+          <article class="team-member reveal"
+            data-nombre="Marcos Vallascani"
+            data-rol="Diseño de Juego - Dirección de Sonido"
+            data-bio="el arquitecto de la condena"
+            data-email="ctapoproducciones@gmail.com"
+            data-instagram="https://www.instagram.com/pixel.adito/">
+            <button type="button" class="member-image" aria-haspopup="dialog">
+              <img src="../img/equipo/integrante-2.jpg" alt="Foto de Marcos, direcion sonido" loading="lazy">
+              <span class="member-image-hint">Ver perfil y contacto</span>
+            </button>
+            <div class="member-content">
+              <h3>Marcos Vallascani</h3>
+              <p class="member-role">Diseño de Juego / Dirección de Sonido</p>
+              <p class="member-bio">Diseño y dirección del juego - sonido y música</p>
+            </div>
+          </article>
+
+          <article class="team-member reveal"
+            data-nombre="Romina Paola Berger"
+            data-rol="Producción / Direccion de Arte"
+            data-bio="la que condenó cada trazo"
+            data-email="ctapoproducciones@gmail.com"
+            data-instagram="https://www.instagram.com/berger1616/"
+            data-portfolio="https://www.linkedin.com/in/romina-paola-berger-9791403a0/">
+            <button type="button" class="member-image" aria-haspopup="dialog">
+              <img src="../img/equipo/integrante-4.jpg" alt="Foto de Nombre Apellido, Diseño de sonido" loading="lazy">
+              <span class="member-image-hint">Ver perfil y contacto</span>
+            </button>
+            <div class="member-content">
+              <h3>Romina Paola Berger</h3>
+              <p class="member-role">Producción / Dirección de Arte </p>
+              <p class="member-bio">Dirección del área de Arte - coordinación del equipo</p>
+            </div>
+          </article>
+
+          <article class="team-member reveal"
+            data-nombre="Sebastián Peralta"
+            data-rol="Programación"
+            data-bio="el que programó la condena"
+            data-email="ctapoproducciones@gmail.com"
+            data-instagram="https://www.instagram.com/inner_kidsoul/reels/">
+            <button type="button" class="member-image" aria-haspopup="dialog">
+              <img src="../img/equipo/integrante-5.png" alt="Foto de sebastian peralta,programacion" loading="lazy">
+              <span class="member-image-hint">Ver perfil y contacto</span>
+            </button>
+            <div class="member-content">
+              <h3>Sebastián Peralta</h3>
+              <p class="member-role">Programación</p>
+              <p class="member-bio">Programación general en Godot</p>
+            </div>
+          </article>
+
+                      <article class="team-member reveal"
+            data-nombre="Lilo Ortiz"
+            data-rol="Programación"
+            data-bio="codeó hasta condenarse"
+            data-email="ctapoproducciones@gmail.com"
+            data-instagram="https://www.instagram.com/unlilito._/"
+            data-portfolio="https://its-lilito.itch.io/">
+            <button type="button" class="member-image" aria-haspopup="dialog">
+              <img src="../img/equipo/integrante-13.jpeg" alt="Foto de lilo" loading="lazy">
+              <span class="member-image-hint">Ver perfil y contacto</span>
+            </button>
+            <div class="member-content">
+              <h3>Lilo Ortiz</h3>
+              <p class="member-role">Programación</p>
+              <p class="member-bio">Programación general en Godot</p>
+            </div>
+          </article>
+
+            <article class="team-member reveal"
+            data-nombre="Saúl Arcucci"
+            data-rol="Arte 2d"
+            data-bio="el que trazó la Salamanca"
+            data-email="ctapoproducciones@gmail.com"
+            data-instagram="https://www.instagram.com/bizarre_shocker_ilustraciones/">
+            <button type="button" class="member-image" aria-haspopup="dialog">
+              <img src="../img/equipo/integrante-6.jpg" alt="Foto de Saul arcucci, arte" loading="lazy">
+              <span class="member-image-hint">Ver perfil y contacto</span>
+            </button>
+            <div class="member-content">
+              <h3>Saúl Arcucci</h3>
+              <p class="member-role">Arte 2d</p>
+              <p class="member-bio">Creación de fondos y elementos en pixel art 2d</p>
+            </div>
+          </article>
+
+          <article class="team-member reveal"
+            data-nombre="Lucio V. Oliva"
+            data-rol="Arte 2d"
+            data-bio="el que pixeleó a los condenados"
+            data-email="ctapoproducciones@gmail.com"
+            data-instagram="https://www.instagram.com/olivalu.9/"
+            data-portfolio="https://linktr.ee/olivalu">
+            <button type="button" class="member-image" aria-haspopup="dialog">
+              <img src="../img/equipo/integrante-9.jpg" alt="Foto de Lucio" loading="lazy">
+              <span class="member-image-hint">Ver perfil y contacto</span>
+            </button>
+            <div class="member-content">
+              <h3>Lucio V.Oliva</h3>
+              <p class="member-role">Arte 2d</p>
+              <p class="member-bio">Creación de personajes y elementos en pixel art 2d</p>
+            </div>
+          </article>
+
+            <article class="team-member reveal"
+            data-nombre="Maximiliano Ftulis"
+            data-rol="música"
+            data-bio="el que torturó los oídos"
+            data-email="ctapoproducciones@gmail.com"
+            data-portfolio="https://www.youtube.com/@maximiliano.ftulis/videos">
+            <button type="button" class="member-image" aria-haspopup="dialog">
+              <img src="../img/equipo/integrante-7.jpg" alt="Foto Maximiliano, musica" loading="lazy">
+              <span class="member-image-hint">Ver perfil y contacto</span>
+            </button>
+            <div class="member-content">
+              <h3>Maximiliano Ftulis</h3>
+              <p class="member-role">Música</p>
+              <p class="member-bio">Composición general de música</p>
+            </div>
+          </article>
+
+            <article class="team-member reveal"
+            data-nombre="Luján Hernández"
+            data-rol="Efectos de Sonido"
+            data-bio="la que condenó los oídos"
+            data-email="ctapoproducciones@gmail.com"
+            data-instagram="https://www.instagram.com/l_wasabi_l"
+            data-portfolio="https://linktr.ee/l_wasabi_l">
+            <button type="button" class="member-image" aria-haspopup="dialog">
+              <img src="../img/equipo/integrante-8.jpg" alt="Foto deLujan, efectos sonido" loading="lazy">
+              <span class="member-image-hint">Ver perfil y contacto</span>
+            </button>
+            <div class="member-content">
+              <h3>Luján Hernández</h3>
+              <p class="member-role">Efectos de Sonido</p>
+              <p class="member-bio">Creación general de efectos de sonidos</p>
+            </div>
+          </article>
+
+            <article class="team-member reveal"
+            data-nombre="Valentín Rioseco"
+            data-rol="Guión"
+            data-bio="el que escribió el trato con el mandinga"
+            data-email="ctapoproducciones@gmail.com"
+            data-instagram="https://www.instagram.com/valentinrioseco">
+            <button type="button" class="member-image" aria-haspopup="dialog">
+              <img src="../img/equipo/integrante-10.jpg" alt="Foto de Valentín Rioseco" loading="lazy">
+              <span class="member-image-hint">Ver perfil y contacto</span>
+            </button>
+            <div class="member-content">
+              <h3>Valentín Rioseco</h3>
+              <p class="member-role">Guión</p>
+              <p class="member-bio">Diseño de narrativa/guión del videojuego</p>
+            </div>
+          </article>
+
+            <article class="team-member reveal"
+            data-nombre="Agustín Dalto"
+            data-rol="música / composición"
+            data-bio="el que condenó los oídos"
+            data-email="ctapoproducciones@gmail.com">
+            <button type="button" class="member-image" aria-haspopup="dialog">
+              <img src="../img/equipo/integrante-11.jpg" alt="Foto deAgustín dalto" loading="lazy">
+              <span class="member-image-hint">aun no hay redes</span>
+            </button>
+            <div class="member-content">
+              <h3>Agustín Dalto</h3>
+              <p class="member-role">Musica / Composición</p>
+              <p class="member-bio">Composición de música del videojuego</p>
+            </div>
+          </article>
+
+            <article class="team-member reveal"
+            data-nombre="Julio Marino"
+            data-rol="música / composición "
+            data-bio="nuestro nuevo condenado"
+            data-email="ctapoproducciones@gmail.com"
+            data-instagram="https://www.instagram.com/_mondiol4">
+            <button type="button" class="member-image" aria-haspopup="dialog">
+              <img src="../img/equipo/integrante-12.jfif" alt="Foto de Julio" loading="lazy">
+              <span class="member-image-hint">Ver perfil y contacto</span>
+            </button>
+            <div class="member-content">
+              <h3>Julio Marino</h3>
+              <p class="member-role">Música</p>
+              <p class="member-bio">Nuevo integrante para la composición </p>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+  <!-- ============ MODAL DE INTEGRANTE ============
+       Oculto por defecto (se muestra con la clase "is-open" desde
+       js/team.js). Un solo modal reutilizado para todos los
+       integrantes: se completa dinámicamente con JS. -->
+  <div class="member-modal" id="memberModal" role="dialog" aria-modal="true" aria-labelledby="modalName" hidden>
+    <div class="member-modal-backdrop" data-close-modal></div>
+    <div class="member-modal-panel">
+      <button type="button" class="member-modal-close" data-close-modal aria-label="Cerrar">&times;</button>
+      <img id="modalPhoto" class="member-modal-photo" src="" alt="">
+      <div class="member-modal-body">
+        <h2 id="modalName"></h2>
+        <p class="member-modal-role" id="modalRole"></p>
+        <p id="modalBio"></p>
+
+        <div class="member-modal-actions">
+          <a id="modalEmail" class="btn" href="#">Contactar</a>
+          <div class="member-modal-social" id="modalSocial"><!-- íconos de redes generados por JS --></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============ FOOTER (compacto) ============ -->
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <a href="../index.html" class="footer-brand">
+          <img src="../img/logo/logo.svg" alt="Estudio CTAPO">
+        </a>
+        <nav class="footer-links" aria-label="Enlaces del pie de página">
+          <a href="equipo.html">Equipo</a>
+          <a href="galeria.html">Galería</a>
+          <a href="contacto.html">Contacto</a>
+        </nav>
+        <div class="footer-social">
+          <a href="mailto:ctapoproducciones@gmail.com" aria-label="Enviar un email">
+            <svg viewBox="0 0 24 24"><path d="M2 4h20v16H2V4zm2 2v.5l8 5 8-5V6H4zm16 3.2-8 5-8-5V18h16V9.2z"/></svg>
+          </a>
+          <a href="https://www.instagram.com/ctapoproducciones/" target="_blank" rel="noopener" aria-label="Instagram">
+            <svg viewBox="0 0 24 24"><path d="M12 2.2c3.2 0 3.6 0 4.9.1 1.2.1 2 .3 2.4.5.6.2 1 .5 1.5 1 .4.4.7.9 1 1.5.2.4.4 1.2.5 2.4.1 1.3.1 1.7.1 4.9s0 3.6-.1 4.9c-.1 1.2-.3 2-.5 2.4-.2.6-.5 1-1 1.5-.4.4-.9.7-1.5 1-.4.2-1.2.4-2.4.5-1.3.1-1.7.1-4.9.1s-3.6 0-4.9-.1c-1.2-.1-2-.3-2.4-.5-.6-.2-1-.5-1.5-1-.4-.4-.7-.9-1-1.5-.2-.4-.4-1.2-.5-2.4-.1-1.3-.1-1.7-.1-4.9s0-3.6.1-4.9c.1-1.2.3-2 .5-2.4.2-.6.5-1 1-1.5.4-.4.9-.7 1.5-1 .4-.2 1.2-.4 2.4-.5C8.4 2.2 8.8 2.2 12 2.2zm0 1.8c-3.1 0-3.5 0-4.7.1-1 .1-1.6.2-1.9.4-.5.2-.8.4-1.2.7-.3.3-.6.7-.7 1.2-.1.3-.3.9-.4 1.9-.1 1.2-.1 1.6-.1 4.7s0 3.5.1 4.7c.1 1 .2 1.6.4 1.9.2.5.4.8.7 1.2.3.3.7.6 1.2.7.3.1.9.3 1.9.4 1.2.1 1.6.1 4.7.1s3.5 0 4.7-.1c1-.1 1.6-.2 1.9-.4.5-.2.8-.4 1.2-.7.3-.3.6-.7.7-1.2.1-.3.3-.9.4-1.9.1-1.2.1-1.6.1-4.7s0-3.5-.1-4.7c-.1-1-.2-1.6-.4-1.9-.2-.5-.4-.8-.7-1.2-.3-.3-.7-.6-1.2-.7-.3-.1-.9-.3-1.9-.4-1.2-.1-1.6-.1-4.7-.1zm0 3.5a4.5 4.5 0 1 1 0 9 4.5 4.5 0 0 1 0-9zm0 1.8a2.7 2.7 0 1 0 0 5.4 2.7 2.7 0 0 0 0-5.4zm5.7-2a1.1 1.1 0 1 1-2.2 0 1.1 1.1 0 0 1 2.2 0z"/></svg>
+          </a>
+          <a href="https://www.linkedin.com/in/ctap%C3%B3-producciones-28ab443a8/" target="_blank" rel="noopener" aria-label="LinkedIn">
+            <svg viewBox="0 0 24 24"><path d="M6.94 5a2 2 0 1 1-4-.002 2 2 0 0 1 4 .002zM7 8.48H3V21h4V8.48zm6.32 0H9.34V21h3.94v-6.57c0-3.66 4.77-3.96 4.77 0V21H22v-7.93c0-6.17-7.06-5.94-8.68-2.91V8.48z"/></svg>
+          </a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; <span id="currentYear">2026</span> Estudio CTAPO. Todos los derechos reservados.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/main.js" defer></script>
+  <script src="../js/team.js" defer></script>
+</body>
+</html>
